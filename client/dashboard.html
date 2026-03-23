@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+  <h2>📝 Blog</h2>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <button onclick="logout()">Logout</button>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- CREATE POST CARD -->
+  <div class="section">
+    <h2>Create Post</h2>
+
+    <input id="title" placeholder="Enter title">
+    <textarea id="content" placeholder="Write your thoughts..."></textarea>
+
+    <button onclick="createPost()">Publish</button>
+  </div>
+
+  <!-- YOUR POSTS -->
+  <div class="section">
+    <h2>Your Posts</h2>
+    <div id="myPosts" class="grid"></div>
+  </div>
+
+</div>
+
+<script src="js/post.js"></script>
+</body>
+</html>

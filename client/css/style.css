@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f9fafb;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 15px;
+  font-weight: 500;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+/* Grid */
+#posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  transition: 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555;
+  font-size: 14px;
+}
+
+/* Button */
+button {
+  padding: 8px 12px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* Inputs */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+body {
+  background: #f4f6f8;
+  color: #222;
+}
+
+/* Sections */
+.section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Grid for posts */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+/* Post Card */
+.card {
+  padding: 15px;
+  border-radius: 10px;
+  background: #fafafa;
+  border: 1px solid #eee;
+}
+
+.card h4 {
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Improve textarea */
+textarea {
+  min-height: 100px;
+}
+
+body {
+  background: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  border-bottom: 1px solid #eee;
+  background: white;
+}
+
+.navbar h2 {
+  font-weight: 600;
+}
+
+.navbar a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #555;
+}
+
+/* Layout */
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+}
+
+/* Writing Box */
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  margin-bottom: 10px;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* Button */
+button {
+  padding: 8px 16px;
+  background: #1a8917;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #146c12;
+}
+
+/* Posts */
+.card {
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.card h3 {
+  margin-bottom: 6px;
+}
+
+.card p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #777;
+}

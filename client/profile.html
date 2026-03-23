@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+  <h2>Profile</h2>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+  </div>
+</div>
+
+<div class="container">
+  <h2>User Info</h2>
+  <p id="userInfo"></p>
+</div>
+
+<script>
+  const userId = localStorage.getItem("userId");
+  document.getElementById("userInfo").innerText = "User ID: " + userId;
+</script>
+
+</body>
+</html>
