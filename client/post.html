@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Post</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="back-wrapper">
+  <button onclick="goBack()" class="back-btn">← Back</button>
+</div>
+<div class="container">
+  <h1 id="title"></h1>
+  <p id="content"></p>
+  <small id="date"></small>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+async function loadPost() {
+  const res = await fetch("http://localhost:5000/api/posts");
+  const data = await res.json();
+
+  const post = data.find(p => p._id === id);
+
+  document.getElementById("title").innerText = post.title;
+  document.getElementById("content").innerText = post.content;
+  document.getElementById("date").innerText =
+    new Date(post.createdAt).toLocaleDateString();
+}
+function goBack() {
+  window.history.back();
+}
+
+loadPost();
+</script>
+
+</body>
+</html>

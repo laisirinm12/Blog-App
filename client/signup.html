@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Signup</title>
   <link rel="stylesheet" href="css/style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
+  <div class="glass">
+    <div class="container">
+      <h2>Signup</h2>
 
-<div class="container">
-  <h2>Signup</h2>
+      <input id="name" placeholder="Name">
+      <input id="email" placeholder="Email">
+      <input id="password" type="password" placeholder="Password">
 
-  <input id="name" placeholder="Name">
-  <input id="email" placeholder="Email">
-  <input id="password" type="password" placeholder="Password">
-
-  <button onclick="signup()">Signup</button>
-</div>
-
-<script src="js/auth.js"></script>
+      <button onclick="signup()">Signup</button>
+      <p style="margin-top:10px;">
+  Already have an account?
+  <a href="login.html">Login</a>
+</p>
+    </div>
+  </div>
+  <script src="js/auth.js"></script>
 </body>
+
 </html>

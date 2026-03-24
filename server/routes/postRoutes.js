@@ -30,6 +30,19 @@ router.get("/my", auth, async (req, res) => {
   res.json(posts);
 });
 
+// UPDATE POST
+router.put("/:id", auth, async (req, res) => {
+  const { title, content } = req.body;
+
+  const updatedPost = await Post.findByIdAndUpdate(
+    req.params.id,
+    { title, content },
+    { new: true }
+  );
+
+  res.json(updatedPost);
+});
+
 // Delete Post
 router.delete("/:id", auth, async (req, res) => {
   await Post.findByIdAndDelete(req.params.id);

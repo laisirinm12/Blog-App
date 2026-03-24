@@ -3,6 +3,7 @@
 <head>
   <title>Profile</title>
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -15,14 +16,31 @@
 </div>
 
 <div class="container">
-  <h2>User Info</h2>
-  <p id="userInfo"></p>
+  <div class="section profile-card">
+
+    <h2>👤 Profile</h2>
+
+    <p><strong>Name:</strong> <span id="name"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+    <p class="small">User ID: <span id="userId"></span></p>
+
+    <hr>
+
+    <h3>Edit Name</h3>
+    <input id="newName" placeholder="New name">
+    <button onclick="updateName()">Update Name</button>
+
+    <hr>
+
+    <h3>Change Password</h3>
+    <input id="oldPassword" type="password" placeholder="Old password">
+    <input id="newPassword" type="password" placeholder="New password">
+    <button onclick="updatePassword()">Update Password</button>
+
+  </div>
 </div>
 
-<script>
-  const userId = localStorage.getItem("userId");
-  document.getElementById("userInfo").innerText = "User ID: " + userId;
-</script>
+<script src="js/profile.js"></script>
 
 </body>
 </html>

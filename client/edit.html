@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Post</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="back-wrapper">
+  <button onclick="goBack()" class="back-btn">← Back</button>
+</div>
+<div class="container">
+  <h2>Edit Post</h2>
+
+  <input id="title">
+  <textarea id="content"></textarea>
+
+  <button onclick="updatePost()">Update</button>
+</div>
+
+<script>
+const token = localStorage.getItem("token");
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+// LOAD OLD DATA
+async function loadPost() {
+  const res = await fetch("http://localhost:5000/api/posts");
+  const data = await res.json();
+
+  const post = data.find(p => p._id === id);
+
+  document.getElementById("title").value = post.title;
+  document.getElementById("content").value = post.content;
+}
+
+loadPost();
+
+// UPDATE POST
+async function updatePost() {
+  const title = document.getElementById("title").value;
+  const content = document.getElementById("content").value;
+
+  await fetch(`http://localhost:5000/api/posts/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": token
+    },
+    body: JSON.stringify({ title, content })
+  });
+
+  alert("Updated");
+  window.location.href = "dashboard.html";
+}
+
+function goBack() {
+  window.history.back();
+}
+</script>
+
+</body>
+</html>
